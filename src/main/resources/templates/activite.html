@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Friends of Mine</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h1>Welcome</h1>
+
+<h2><i>Friends of Mine</i> - activité</h2>
+
+<table>
+    <tr>
+        <th>Activité</th>
+    </tr>
+    <tr th:each="acti : ${activite}">
+        <td th:text="${acti.getUnTitre()}"> </td>
+        <td th:text="${acti.getUnDescriptif()}"> </td>
+
+    </tr>
+</table>
+
+</body>
+</html>
